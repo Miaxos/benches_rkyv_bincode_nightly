@@ -1,0 +1,20 @@
+[package]
+name = "bench_serialization"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+abomonation = { version = "0.7" }
+abomonation_derive = { version = "0.5" }
+criterion = "0.3"
+bincode = { version = "1.3" }
+rand = "0.8"
+rand_pcg = "0.3"
+rkyv = { version = "0.7", features = ["validation"] }
+serde = { version = "1", features = ["derive"] }
+
+[[bench]]
+name = "bench_serialization"
+harness = false
